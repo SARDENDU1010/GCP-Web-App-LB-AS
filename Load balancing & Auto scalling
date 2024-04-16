@@ -1,0 +1,16 @@
+create instance tempelete
+Define instance tempelete name, location , machine type, firewall
+
+create instance group  
+Define instance name, location multiple zone , target (even/balanced)instance, auto scalling number of instance ,auto scalling CPU utilization, health check, port mapping
+
+create load balancing
+inside network services define LB name, type of load balancer, public /internal facing LB, global/single region deployment, LB generation, create load balancer.
+inside global external Application Load Balancer, name the load balancer then define frontend configuration, backend configuration
+
+backend configuration, name backend configuration, backend type, protocol, select pre defined instance group & port number, balancing mode (load balancing)
+enable cdn, recomended cache mode,   select pre define , set logging (checking logs file for fail and pass load balancing  health check.  
+
+Go to vm instance , select SSH, update the service and install apache 
+
+launch SSH, run "sudo systemctl start appache2" check external instance ip apache server must be running.
